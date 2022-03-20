@@ -179,8 +179,7 @@ class Cell:
 
         return self.num
 
-
-if __name__ == '__main__':
+def generateBoard():
     matrix = Matrix()
     matrix.changeBoard(matrix.board[4][4])  # generate center
     # generate board loop:
@@ -196,5 +195,8 @@ if __name__ == '__main__':
         try: selected_cell = choice(possible_cells) 
         except IndexError: Matrix.printMatrix(matrix)
         matrix.changeBoard(selected_cell)
-        #Matrix.printMatrix(matrix)
-    Matrix.printMatrix(matrix)
+    return matrix
+
+if __name__ == '__main__':
+    my_matrix = generateBoard()
+    Matrix.printMatrix(my_matrix)
