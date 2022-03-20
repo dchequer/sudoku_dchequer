@@ -2,9 +2,9 @@ LICENSE
 README.md
 pyproject.toml
 setup.cfg
+src/Sudoku_DCHEQUER.egg-info/PKG-INFO
+src/Sudoku_DCHEQUER.egg-info/SOURCES.txt
+src/Sudoku_DCHEQUER.egg-info/dependency_links.txt
+src/Sudoku_DCHEQUER.egg-info/top_level.txt
 src/sudoku/__init__.py
 src/sudoku/sudoku_oop.py
-src/sudoku_dchequer.egg-info/PKG-INFO
-src/sudoku_dchequer.egg-info/SOURCES.txt
-src/sudoku_dchequer.egg-info/dependency_links.txt
-src/sudoku_dchequer.egg-info/top_level.txt
