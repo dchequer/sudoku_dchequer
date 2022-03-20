@@ -26,3 +26,6 @@ The main function of the program is an example of how to create a board
 * Create a list of all cells that have *least number* amount of choices
 * Randomly choose one cell from this list
 * Call `Matrix.changeBoard()` with the random cell as the argument
+
+## End
+To use this module all you have to do is set `var_name = sudoku-oop.generateBoard()` and it will return a Matrix Object with your board
