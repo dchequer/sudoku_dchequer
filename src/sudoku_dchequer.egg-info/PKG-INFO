@@ -2,11 +2,11 @@ Metadata-Version: 2.1
 Name: sudoku-dchequer
 Version: 0.0.1
 Summary: An object oriented Sudoku Board Generator
-Home-page: https://github.com/dchequer/sudoku-dchequer
+Home-page: https://github.com/dchequer/sudoku_dchequer
 Author: Diego Chequer
 Author-email: millychequer@gmail.com
 License: UNKNOWN
-Project-URL: Bug Tracker, https://github.com/dchequer/sudoku-dchequer/issues
+Project-URL: Bug Tracker, https://github.com/dchequer/sudoku_dchequer/issues
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License

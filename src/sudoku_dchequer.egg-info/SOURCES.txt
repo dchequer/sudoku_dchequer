@@ -3,7 +3,7 @@ README.md
 pyproject.toml
 setup.cfg
 src/sudoku/__init__.py
-src/sudoku/sudoku-oop.py
+src/sudoku/sudoku_oop.py
 src/sudoku_dchequer.egg-info/PKG-INFO
 src/sudoku_dchequer.egg-info/SOURCES.txt
 src/sudoku_dchequer.egg-info/dependency_links.txt
