@@ -29,6 +29,14 @@ cols = 9
 def printSubseed(subseed):
     return [print(subseed[i*3:(i+1)*3]) for i in range(3)]
 
+class BackTrackError(Exception):
+    def __init__(self, message):            
+        # Call the base class constructor with the parameters it needs
+        super().__init__(message)
+            
+        # Now for your custom code...
+        #self.errors = errors
+
 class Matrix:
     def __init__(self):
         self.board = [[Cell(pos=(row, col)) for col in range(cols)]
@@ -44,7 +52,7 @@ class Matrix:
         for row in range(rows):
             result += "\n"
             for col in range(cols):
-                cell = matrix.board[row][col]
+                cell = self.board[row][col]
                 result += f'[{row}][{col}]={cell.num}'
         return result
     
@@ -103,14 +111,15 @@ class Matrix:
             #get a different num and get back on track
         #no:
             #backtrack again repeat
+        raise BackTrackError("Backtrack not available") 
         lastCell = self.cellStack
         if (len(lastCell.options) > 1):
             #theres another option
             self.cells.append(lastCell)
             lastCell.options -= {lastCell.num}
             for cell in history:
-                matrix.changeBoard(cell)
-            matrix.changeBoard(lastCell)
+                self.changeBoard(cell)
+            self.changeBoard(lastCell)
         else:
             #backtrack again
             history.insert(0, lastCell)
@@ -142,14 +151,14 @@ class Matrix:
         for col in range(cols):
             if col == lastCell.col: #skip itself
                 continue
-            matrix.board[row][col].exclude(self)
+            self.board[row][col].exclude(self)
 
         # update options in col of last change
         col = lastCell.col
         for row in range(rows):
             if row == lastCell.row: #skip itself
                 continue
-            matrix.board[row][col].exclude(self)
+            self.board[row][col].exclude(self)
         self.sortOptions()
 
 
