@@ -12,7 +12,7 @@ setup(
     author = "Diego Chequer",
     author_email = "millychequer@gmail.com",
     url = "https://github.com/dchequer/sudoku_dchequer",
-    packages = find_packages(where='src'),
+    packages = find_packages(),
     classifiers= [
         "Development Status :: 2 - Pre-Alpha",
         "License :: OSI Approved :: MIT License",
