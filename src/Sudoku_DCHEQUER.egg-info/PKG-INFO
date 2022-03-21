@@ -2,6 +2,7 @@ Metadata-Version: 2.1
 Name: Sudoku-DCHEQUER
 Version: 0.0.3
 Summary: An Object Oriented Sudoku Game Generator
+Home-page: https://github.com/dchequer/sudoku_dchequer
 Author: Diego Chequer
 Author-email: millychequer@gmail.com
 License: UNKNOWN
