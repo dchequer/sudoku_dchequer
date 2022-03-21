@@ -192,7 +192,7 @@ class Cell:
 
         return self.num
 
-def generateBoard():
+def generateBoard() -> Matrix:
     matrix = Matrix()
     matrix.changeBoard(matrix.board[4][4])  # generate center
     # generate board loop:
@@ -214,7 +214,7 @@ def generateBoard():
         matrix.changeBoard(selected_cell)
     return matrix
 
-def gameify(board:Matrix, difficulty = 60):
+def gameify(board:Matrix, difficulty = 60) -> Matrix:
     total = 81
     game = deepcopy(board)
 
