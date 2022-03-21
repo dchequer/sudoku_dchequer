@@ -1,5 +1,7 @@
 from __future__ import annotations
-from random import choice
+from copy import deepcopy
+from random import choice, randint
+
 
 
 # class cell()
@@ -111,7 +113,7 @@ class Matrix:
             #get a different num and get back on track
         #no:
             #backtrack again repeat
-        raise BackTrackError("Backtrack not available") 
+        #raise BackTrackError("Backtrack not available") 
         lastCell = self.cellStack
         if (len(lastCell.options) > 1):
             #theres another option
@@ -129,7 +131,9 @@ class Matrix:
     def changeBoard(self, cell: Cell):
         if not cell.options: #if options set is empty
             #need to backtrack 
-            self.backtrack(cell)
+            #if (self.backtrack(cell) == None):
+                #return None
+                pass
         
         new_num  = choice(list(cell.options))
         self.board[cell.row][cell.col].setNum(new_num)
@@ -200,12 +204,29 @@ def generateBoard():
     # repeat there are available cells
     while (matrix.cells):  # while it contains cells
         least_choices = len(matrix.cells[0].options)
+        if (least_choices == 0):
+            new = generateBoard()
+            return new
+        
         possible_cells = [cell for cell in matrix.cells if len(cell.options)==least_choices]
-        try: selected_cell = choice(possible_cells) 
-        except IndexError: Matrix.printMatrix(matrix)
+        selected_cell = choice(possible_cells)
+        
         matrix.changeBoard(selected_cell)
     return matrix
+
+def gameify(board:Matrix, difficulty = 60):
+    total = 81
+    game = deepcopy(board)
+
+    while total >= difficulty:
+        ran_row, ran_col = randint(0, 8), randint(0, 8)
+        game.board[ran_row][ran_col].num = 0
+        total -= 1
+    return game
 
 if __name__ == '__main__':
     my_matrix = generateBoard()
     Matrix.printMatrix(my_matrix)
+    game = gameify(my_matrix)
+    Matrix.printMatrix(my_matrix)
+    Matrix.printMatrix(game)
