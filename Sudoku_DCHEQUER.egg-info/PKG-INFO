@@ -12,6 +12,7 @@ Classifier: License :: OSI Approved :: MIT License
 Classifier: Natural Language :: English
 Classifier: Operating System :: OS Independent
 Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
 License-File: LICENSE
 
 # Beginner Object Oriented Sudoku Board Generator
