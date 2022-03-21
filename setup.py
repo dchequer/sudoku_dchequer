@@ -1,24 +1,23 @@
-import os
-from setuptools import setup
+from setuptools import setup, find_packages
 
-# Utility function to read the README file.
-# Used for the long_description.  It's nice, because now 1) we have a top level
-# README file and 2) it's easier to type in the README file than to put a raw
-# string in below ...
-def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+with open("README.md", "r") as f:
+    long_description = f.read()
 
 setup(
-    name = "Sudoku",
+    name = "Sudoku-DCHEQUER",
     version = "0.0.2",
+    description = "An Object Oriented Sudoku Game Generator",
+    license = "MIT",
+    long_description=long_description,
     author = "Diego Chequer",
     author_email = "millychequer@gmail.com",
-    description = ("An Object Oriented Sudoku Game Generator"),
     url = "https://github.com/dchequer/sudoku_dchequer",
-    long_description=read('README'),
-    classifiers=[
-        "Development Status :: Working",
-        "Topic :: Utilities",
-        "License :: MIT License",
-    ],
-)
+    packages = find_packages(where='src'),
+    classifiers= [
+        "Development Status :: 2 - Pre-Alpha",
+        "License :: OSI Approved :: MIT License",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3.9"
+    ]
+)   
