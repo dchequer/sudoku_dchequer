@@ -1,8 +1,0 @@
-LICENSE
-README.md
-pyproject.toml
-setup.py
-Sudoku_DCHEQUER.egg-info/PKG-INFO
-Sudoku_DCHEQUER.egg-info/SOURCES.txt
-Sudoku_DCHEQUER.egg-info/dependency_links.txt
-Sudoku_DCHEQUER.egg-info/top_level.txt
